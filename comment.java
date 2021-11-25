@@ -1,6 +1,7 @@
 
 public class comment {
     private String comment;
+    private int volgnummer;
     private user user;
     private int likes;
 

@@ -54,7 +54,7 @@ public class user {
         return posts;
     }
 
-    public void addCommentToPost(comment text, String name) {
+    public void addCommentToPost(comment text, user commenter) {
         // Hier voegt men geen comment toe
 
     }

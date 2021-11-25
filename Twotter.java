@@ -53,16 +53,16 @@ public class Twotter {
 
             // Comment toevoegen is nog in een beta
             if (i.equals("Comment")) {
+
+                System.out.println("Who is commenting?");
+                // Chooses user
                 String usr = scan.nextLine();
 
                 for (user user : users) {
                     if (user.getName().equals(usr)) {
                         System.out.println("What do you want to comment?");
                         String text = scan.nextLine();
-                        comment newComment = new comment(text, user);
-                        System.out.println("On which comment do you want to react?");
-                        String other = scan.nextLine();
-                        user.addCommentToPost(newComment, other);
+                        comment newComment = new comment(text, usr);
                     }
                 }
             }
