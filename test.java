@@ -4,17 +4,14 @@ public class test {
         user james = new user("James");
 
         post p1 = new post("Terry sucks", xin);
-        post p2 = new post("Gerrard is much better", xin);
-
-        post p3 = new post("Justins ass is great", james);
 
         xin.addPosts(p1);
-        xin.addPosts(p2);
-        xin.addPosts(p3);
 
-        comment c1 = new comment("Jerremy is the best", new user("Hans"));
+        comment c1 = new comment(1, "Jerremy is the best", james);
+        comment c2 = new comment(2, "Test test", james);
 
         p1.addComment(c1);
+        p1.addComment(c2);
 
         System.out.println("Result");
         xin.printPosts();

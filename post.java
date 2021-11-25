@@ -9,14 +9,14 @@ public class post {
     private int Likes;
     private user poster;
     private int commentNumber;
-    private Map<Integer, comment> commentSection;
+    private List<comment> commentSection;
 
     public post(String text, user poster) {
         this.text = text;
         this.Likes = 0;
         this.poster = poster;
         this.commentNumber = 1;
-        this.commentSection = new HashMap<>();
+        this.commentSection = new ArrayList<>();
     }
 
     public void setLikes(int likes) {
@@ -32,14 +32,13 @@ public class post {
     }
 
     public void printComments() {
-        for (comment comment : commentSection.values()) {
+        for (comment comment : commentSection) {
             System.out.println(comment);
         }
     }
 
     public void addComment(comment text) {
-        this.commentSection.put(this.commentNumber, text);
-        commentNumber++;
+        this.commentSection.add(text);
     }
 
     public void setText(String text) {
